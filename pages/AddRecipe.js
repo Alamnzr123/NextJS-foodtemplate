@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Navbar from "./Navigation";
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Footer from "./footer/Footer3";
 import Head from "next/head";
@@ -10,7 +9,6 @@ import Link from "next/link";
 
 const AddRecipe = () => {
   const hiddenFileInput = useRef(null);
-  const navigate = Link();
   const [image, setImage] = useState("");
 
   const [form, setForm] = useState({
@@ -63,7 +61,7 @@ const AddRecipe = () => {
       .then((response) => {
         console.log(response);
         alert(response.data.message);
-        return navigate("/profile");
+        return <Link href="/profile" />;
         // if(response.data.status !== "success") {
         //   alert("error axios")
         //   // alert(response.data.status+": "+response.data.message)
@@ -78,9 +76,9 @@ const AddRecipe = () => {
 
   useEffect(() => {
     if (!localStorage.getItem("token")) {
-      return navigate("/login");
+      return <Link href="/login" />;
     }
-  }, [navigate]);
+  }, []);
 
   return (
     <div>

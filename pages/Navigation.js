@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
-import Gambar1 from "../Assets/User icon.png";
 import {
   Container,
   Navbar,
@@ -12,12 +10,14 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navigation = () => {
   // Collapse isOpen State
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+  const location = useRouter();
 
   // useEffect(() => {
   //   isLogin();
@@ -25,11 +25,11 @@ const Navigation = () => {
 
   const logout = () => {
     localStorage.clear();
-    navigate("/login");
+    return <Link href="/login" />;
   };
 
   const mainMenu = () => {
-    const token = localStorage.getItem("token");
+    const token = window.localStorage.getItem("token");
     if (token) {
       return (
         <>
@@ -57,13 +57,13 @@ const Navigation = () => {
   };
 
   const isLogin = () => {
-    const token = localStorage.getItem("token");
+    const token = window.localStorage.getItem("token");
     if (token) {
       const decoded = jwt_decode(token);
       return (
         <div className={location.pathname === "/" ? "nav-auth" : "nav-inverse"}>
           <img src={Gambar1} alt="User Icon" />
-          <Link to="/profile">{decoded.name}</Link>
+          <Link href="/profile">{decoded.name}</Link>
           <button title="Logout" onClick={logout}>
             <i class="fa-solid fa-right-from-bracket"></i>
           </button>
@@ -72,8 +72,8 @@ const Navigation = () => {
     } else {
       return (
         <div className="nav-auth">
-          <img src={Gambar1} alt="User Icon" />
-          <Link to="/login">Login</Link>
+          <Image src="/Assets/User icon.png" alt="User Icon" />
+          <Link href="/login">Login</Link>
         </div>
       );
     }

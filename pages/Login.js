@@ -3,8 +3,8 @@ import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Gambar1 from "../Assets/logo.svg";
 import Head from "next/head";
+import Image from "next/image";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -59,7 +59,7 @@ const Login = () => {
         <div className="col-md-6 Auth_bg__o9fLW ">
           <div className="mask_bg"></div>
           <div className="background_login_logo">
-            <img src={Gambar1} />
+            <Image src="../Assets/logo.svg" />
           </div>
         </div>
         <div className="col-md-6 px-0">

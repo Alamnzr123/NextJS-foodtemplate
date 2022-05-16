@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Navbar from "./Navigation";
-import Gambar1 from "../Assets/image-solid.svg";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Footer from "./footer/Footer3";
-import Head from 'next/head';
+import Head from "next/head";
+import Image from "next/image";
 
 const EditRecipe = () => {
   const hiddenFileInput = useRef(null);
@@ -112,9 +112,9 @@ const EditRecipe = () => {
       >
         <div className="Rectangle329">
           <div>
-            <img
+            <Image
               className="image_add"
-              src={image ? image : Gambar1}
+              src={image ? image : "/Assets/image-solid.svg"}
               alt="Gambar1"
             />
           </div>

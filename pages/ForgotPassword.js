@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Gambar1 from "../Assets/logo.svg";
 import { Link } from "react-router-dom";
 import Head from "next/head";
+import Image from "next/image";
 
 const ForgotPassword = () => {
   return (
@@ -14,7 +14,7 @@ const ForgotPassword = () => {
         <div className="col-md-6 Auth_bg__o9fLW">
           <div className="mask_bg"></div>
           <div className="background_login_logo">
-            <img src={Gambar1} />
+            <Image src="/Assets/logo.svg" />
           </div>
         </div>
         <div className="col-md-6 px-0">
