@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Gambar1 from "/assets/logo.svg";
+import Gambar1 from "../public/assets/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { toast } from "react-toastify";

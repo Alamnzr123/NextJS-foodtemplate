@@ -6,10 +6,10 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 import Footer from "./footer/Footer";
 import swal from "sweetalert";
-import Gambar1 from "/assets/4662c85cb7661f579e2c9baff0ce5fdc.png";
-import Gambar2 from "/assets/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg";
-import Gambar3 from "/assets/65940ba73f12f048d870dfa487a052df.jpg";
-import Gambar4 from "/assets/logo_pencil.svg";
+import Gambar1 from "../public/assets/4662c85cb7661f579e2c9baff0ce5fdc.png";
+import Gambar2 from "../public/assets/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg";
+import Gambar3 from "../public/assets/65940ba73f12f048d870dfa487a052df.jpg";
+import Gambar4 from "../public/assets/logo_pencil.svg";
 import {
   Container,
   Nav,

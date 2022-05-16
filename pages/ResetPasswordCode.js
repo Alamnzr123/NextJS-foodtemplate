@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Gambar1 from "/assets/logo.svg";
+import Gambar1 from "../public/assets/logo.svg";
 import { Link } from "react-router-dom";
 import Head from "next/head";
 
