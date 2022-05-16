@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-import "@fontsource/poppins";
-import "@fontsource/inter";
+import { createGlobalStyle } from 'styled-components'
+import '@fontsource/poppins'
+import '@fontsource/inter'
 
 const GlobalStyles = createGlobalStyle`
 
@@ -320,6 +320,6 @@ const GlobalStyles = createGlobalStyle`
 
 
 
-`;
+`
 
-export default GlobalStyles;
+export default GlobalStyles

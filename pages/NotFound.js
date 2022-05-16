@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Head from "next/head";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Head from 'next/head'
 
-export default function NotFound() {
+export default function NotFound () {
   return (
     <>
       <Head>
@@ -16,5 +16,5 @@ export default function NotFound() {
         </Link>
       </div>
     </>
-  );
+  )
 }

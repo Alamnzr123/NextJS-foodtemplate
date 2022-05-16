@@ -1,12 +1,12 @@
-import { useState } from "react";
-import ListNavbar from "./Navigation";
-import Footer from "./footer/Footer";
-import { Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap";
-import Head from "next/head";
-import Image from "next/image";
+import { useState } from 'react'
+import ListNavbar from './Navigation'
+import Footer from './footer/Footer'
+import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap'
+import Head from 'next/head'
+import Image from 'next/image'
 
 const ChangeProfile = () => {
-  const [activeTab, setActiveTab] = useState("1");
+  const [activeTab, setActiveTab] = useState('1')
   return (
     <div>
       <Head>
@@ -38,24 +38,24 @@ const ChangeProfile = () => {
         <Nav tabs>
           <NavItem>
             <NavLink
-              className={activeTab == "1" ? "active" : ""}
-              onClick={() => setActiveTab("1")}
+              className={activeTab == '1' ? 'active' : ''}
+              onClick={() => setActiveTab('1')}
             >
               My Recipe
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
-              className={activeTab == "2" ? "active" : ""}
-              onClick={() => setActiveTab("2")}
+              className={activeTab == '2' ? 'active' : ''}
+              onClick={() => setActiveTab('2')}
             >
               Saved Recipe
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
-              className={activeTab == "3" ? "active" : ""}
-              onClick={() => setActiveTab("3")}
+              className={activeTab == '3' ? 'active' : ''}
+              onClick={() => setActiveTab('3')}
             >
               Liked Recipe
             </NavLink>
@@ -63,7 +63,7 @@ const ChangeProfile = () => {
         </Nav>
         <TabContent activeTab={activeTab}>
           <TabPane tabId="1">
-            {" "}
+            {' '}
             <div>
               <Image
                 src="/Assets/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg"
@@ -77,12 +77,12 @@ const ChangeProfile = () => {
                 src="/Assets/65940ba73f12f048d870dfa487a052df.jpg"
                 className="Rectangle328_2"
                 alt="Gambar3"
-              />{" "}
+              />{' '}
               <h1 className="text_banana_2">Bananas Pancake</h1>
             </div>
           </TabPane>
           <TabPane tabId="2">
-            {" "}
+            {' '}
             <div className="line18"></div>
             <div>
               <Image
@@ -103,7 +103,7 @@ const ChangeProfile = () => {
             <Footer />
           </TabPane>
           <TabPane tabId="3">
-            {" "}
+            {' '}
             <div className="line18"></div>
             <div>
               <Image
@@ -126,7 +126,7 @@ const ChangeProfile = () => {
         </TabContent>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ChangeProfile;
+export default ChangeProfile

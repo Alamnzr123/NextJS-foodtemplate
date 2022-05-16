@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Gambar1 from "../Assets/logo.svg";
-import { Link } from "react-router-dom";
-import Head from "next/head";
+import React, { Component } from 'react'
+import Gambar1 from '../Assets/logo.svg'
+import { Link } from 'react-router-dom'
+import Head from 'next/head'
 const ResetPassword = () => {
   return (
     <>
@@ -69,7 +69,7 @@ const ResetPassword = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ResetPassword;
+export default ResetPassword

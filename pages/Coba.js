@@ -1,20 +1,20 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 
 const Coba = () => {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState([])
 
   useEffect(() => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=10&offset=0")
+      .get('https://pokeapi.co/api/v2/pokemon?limit=10&offset=0')
       .then((response) => {
-        setList(response.data.results);
+        setList(response.data.results)
         //   console.log(response.data.results);
       })
       .catch((err) => {
-        alert("error");
-      });
-  });
+        alert('error')
+      })
+  })
 
   return (
     <>
@@ -27,7 +27,7 @@ const Coba = () => {
         ))}
       </ul>
     </>
-  );
-};
+  )
+}
 
-export default Coba;
+export default Coba

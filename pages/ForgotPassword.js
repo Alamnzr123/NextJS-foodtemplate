@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import Head from "next/head";
-import Image from "next/image";
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import Head from 'next/head'
+import Image from 'next/image'
 
 const ForgotPassword = () => {
   return (
@@ -55,7 +55,7 @@ const ForgotPassword = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ForgotPassword;
+export default ForgotPassword

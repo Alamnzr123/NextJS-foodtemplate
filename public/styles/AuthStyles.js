@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import "@fontsource/inter";
+import { createGlobalStyle } from 'styled-components'
+import '@fontsource/inter'
 
 const Auth = createGlobalStyle`
   @font-face {
@@ -134,6 +134,6 @@ const Auth = createGlobalStyle`
       text-align: center;
     }
   }
-`;
+`
 
-export default Auth;
+export default Auth

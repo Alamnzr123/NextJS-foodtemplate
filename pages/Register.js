@@ -1,79 +1,79 @@
-import React, { useState } from "react";
-import Gambar1 from "../Assets/logo.svg";
-import { Link, useNavigate } from "react-router-dom";
-import swal from "sweetalert";
-import { toast } from "react-toastify";
-import axios from "axios";
-import Head from "next/head";
+import React, { useState } from 'react'
+import Gambar1 from '../Assets/logo.svg'
+import { Link, useNavigate } from 'react-router-dom'
+import swal from 'sweetalert'
+import { toast } from 'react-toastify'
+import axios from 'axios'
+import Head from 'next/head'
 
 const Register = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    password1: "",
-    password2: "",
-    phone: "",
-    terms: "",
-  });
+    name: '',
+    email: '',
+    password1: '',
+    password2: '',
+    phone: '',
+    terms: ''
+  })
   const onChangeInput = (e, field) => {
     setForm({
       ...form,
-      [field]: e,
-    });
-  };
+      [field]: e
+    })
+  }
   const onSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (form.terms !== true) {
-      alert("You must agree terms & conditions");
+      alert('You must agree terms & conditions')
     } else if (
-      form.name == "" ||
-      form.email == "" ||
-      form.password == "" ||
-      form.phone == ""
+      form.name == '' ||
+      form.email == '' ||
+      form.password == '' ||
+      form.phone == ''
     ) {
-      alert("All field must be filled !");
+      alert('All field must be filled !')
     } else if (form.password1 !== form.password2) {
-      alert("Password not match !, check your input again");
+      alert('Password not match !, check your input again')
     } else {
       const body = {
         name: form.name,
         email: form.email,
         password: form.password1,
-        phone: form.phone,
-      };
+        phone: form.phone
+      }
       axios
         .post(`${process.env.REACT_APP_BACKEND_URL}/register`, body, {
           headers: {
-            "Content-Type": "application/json",
-          },
+            'Content-Type': 'application/json'
+          }
         })
         .then((res) => {
           swal({
-            title: "Success!",
+            title: 'Success!',
             text: res.data.message,
-            icon: "success",
+            icon: 'success'
           }).then(() => {
-            navigate("/login");
-          });
+            navigate('/login')
+          })
         })
         .catch((err) => {
-          const error = err.response.data.errors;
+          const error = err.response.data.errors
           error.map((e) => {
             return toast.error(e, {
-              position: "top-right",
+              position: 'top-right',
               autoClose: 2000,
               hideProgressBar: false,
               closeOnClick: true,
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-              theme: "colored",
-            });
-          });
-        });
+              theme: 'colored'
+            })
+          })
+        })
     }
-  };
+  }
 
   return (
     <>
@@ -113,7 +113,7 @@ const Register = () => {
                     type="text"
                     name="name"
                     id="name"
-                    onChange={(e) => onChangeInput(e.target.value, "name")}
+                    onChange={(e) => onChangeInput(e.target.value, 'name')}
                     required=""
                   />
                 </div>
@@ -125,7 +125,7 @@ const Register = () => {
                     className="form-control"
                     placeholder="Enter email address"
                     type="email"
-                    onChange={(e) => onChangeInput(e.target.value, "email")}
+                    onChange={(e) => onChangeInput(e.target.value, 'email')}
                     name="email"
                     id="email"
                     required=""
@@ -141,7 +141,7 @@ const Register = () => {
                     type="number"
                     name="phone"
                     id="phone"
-                    onChange={(e) => onChangeInput(e.target.value, "phone")}
+                    onChange={(e) => onChangeInput(e.target.value, 'phone')}
                     required=""
                   />
                 </div>
@@ -153,7 +153,7 @@ const Register = () => {
                     className="form-control"
                     placeholder="Create New Password"
                     type="password"
-                    onChange={(e) => onChangeInput(e.target.value, "password1")}
+                    onChange={(e) => onChangeInput(e.target.value, 'password1')}
                     name="password1"
                     id="password1"
                     required=""
@@ -168,7 +168,7 @@ const Register = () => {
                     placeholder="New password"
                     type="password"
                     name="password2"
-                    onChange={(e) => onChangeInput(e.target.value, "password2")}
+                    onChange={(e) => onChangeInput(e.target.value, 'password2')}
                     id="password2"
                     required=""
                   />
@@ -180,7 +180,7 @@ const Register = () => {
                     type="checkbox"
                     className="form-check-input"
                     id="terms"
-                    onChange={(e) => onChangeInput(e.target.checked, "terms")}
+                    onChange={(e) => onChangeInput(e.target.checked, 'terms')}
                   />
                   <label for="terms"> I aggree to terms & Conditions</label>
                   <br />
@@ -191,15 +191,15 @@ const Register = () => {
                 </button>
                 <div
                   style={{
-                    left: "100px",
-                    top: "24px",
-                    position: "relative",
+                    left: '100px',
+                    top: '24px',
+                    position: 'relative'
                   }}
                 >
-                  Already have an account?{" "}
+                  Already have an account?{' '}
                   <Link
                     to="/login"
-                    style={{ textDecoration: "none", color: "#EFC81A" }}
+                    style={{ textDecoration: 'none', color: '#EFC81A' }}
                   >
                     Log in Here
                   </Link>
@@ -210,6 +210,6 @@ const Register = () => {
         </div>
       </div>
     </>
-  );
-};
-export default Register;
+  )
+}
+export default Register

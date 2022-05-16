@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import jwt_decode from "jwt-decode";
+import React, { useState } from 'react'
+import jwt_decode from 'jwt-decode'
 import {
   Container,
   Navbar,
@@ -8,28 +8,28 @@ import {
   Collapse,
   Nav,
   NavItem,
-  NavLink,
-} from "reactstrap";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
+  NavLink
+} from 'reactstrap'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Navigation = () => {
   // Collapse isOpen State
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useRouter();
+  const [isOpen, setIsOpen] = useState(false)
+  const location = useRouter()
 
   // useEffect(() => {
   //   isLogin();
   // }, []);
 
   const logout = () => {
-    localStorage.clear();
-    return <Link href="/login" />;
-  };
+    localStorage.clear()
+    return <Link href="/login" />
+  }
 
   const mainMenu = () => {
-    const token = window.localStorage.getItem("token");
+    const token = window.localStorage.getItem('token')
     if (token) {
       return (
         <>
@@ -37,7 +37,7 @@ const Navigation = () => {
             <NavLink
               tag={Link}
               to="/addrecipe"
-              active={location.pathname === "/recipe"}
+              active={location.pathname === '/recipe'}
             >
               add recipe
             </NavLink>
@@ -46,38 +46,38 @@ const Navigation = () => {
             <NavLink
               tag={Link}
               to="/profile"
-              active={location.pathname === "/profile"}
+              active={location.pathname === '/profile'}
             >
               profile
             </NavLink>
           </NavItem>
         </>
-      );
+      )
     }
-  };
+  }
 
   const isLogin = () => {
-    const token = window.localStorage.getItem("token");
+    const token = window.localStorage.getItem('token')
     if (token) {
-      const decoded = jwt_decode(token);
+      const decoded = jwt_decode(token)
       return (
-        <div className={location.pathname === "/" ? "nav-auth" : "nav-inverse"}>
+        <div className={location.pathname === '/' ? 'nav-auth' : 'nav-inverse'}>
           <img src={Gambar1} alt="User Icon" />
           <Link href="/profile">{decoded.name}</Link>
           <button title="Logout" onClick={logout}>
             <i class="fa-solid fa-right-from-bracket"></i>
           </button>
         </div>
-      );
+      )
     } else {
       return (
         <div className="nav-auth">
           <Image src="/Assets/User icon.png" alt="User Icon" />
           <Link href="/login">Login</Link>
         </div>
-      );
+      )
     }
-  };
+  }
 
   return (
     <>
@@ -88,7 +88,7 @@ const Navigation = () => {
           </NavbarBrand>
           <NavbarToggler
             onClick={() => {
-              setIsOpen(!isOpen);
+              setIsOpen(!isOpen)
             }}
           >
             <i className="fas fa-bars"></i>
@@ -96,7 +96,7 @@ const Navigation = () => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="me-auto" navbar>
               <NavItem>
-                <NavLink tag={Link} to="/" active={location.pathname === "/"}>
+                <NavLink tag={Link} to="/" active={location.pathname === '/'}>
                   Home
                 </NavLink>
               </NavItem>
@@ -104,7 +104,7 @@ const Navigation = () => {
                 <NavLink
                   tag={Link}
                   to="/view"
-                  active={location.pathname === "/view"}
+                  active={location.pathname === '/view'}
                 >
                   view recipe
                 </NavLink>
@@ -116,7 +116,7 @@ const Navigation = () => {
         </Container>
       </Navbar>
     </>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

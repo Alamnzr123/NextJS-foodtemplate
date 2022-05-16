@@ -1,10 +1,10 @@
-import React from "react";
-import Navbar from "./Navigation";
-import Footer from "./footer/Footer2";
-import Head from "next/head";
-import Image from "next/image";
+import React from 'react'
+import Navbar from './Navigation'
+import Footer from './footer/Footer2'
+import Head from 'next/head'
+import Image from 'next/image'
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -138,7 +138,7 @@ const Home = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

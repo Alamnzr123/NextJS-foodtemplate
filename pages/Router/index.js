@@ -1,26 +1,26 @@
-import React from "react";
-//import module dari react-router-dom
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-//import ketiga file views
-import Profile from "../Profile";
-import Home from "../Home";
-import AddRecipe from "../AddRecipe";
-import RecipeDetail from "../RecipeDetail";
-import Login from "../Login";
-import Register from "../Register";
-import ForgotPassword from "../ForgotPassword";
-import ResetPasswordCode from "../ResetPasswordCode";
-import ResetPassword from "../ResetPassword";
-import VideoRecipe from "../VideoRecipe";
-import ChangeProfile from "../ChangeProfile";
-import NotFound from "../NotFound";
-import EditRecipe from "../EditRecipe";
-import Coba from "../Coba";
+import React from 'react'
+// import module dari react-router-dom
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+// import ketiga file views
+import Profile from '../Profile'
+import Home from '../Home'
+import AddRecipe from '../AddRecipe'
+import RecipeDetail from '../RecipeDetail'
+import Login from '../Login'
+import Register from '../Register'
+import ForgotPassword from '../ForgotPassword'
+import ResetPasswordCode from '../ResetPasswordCode'
+import ResetPassword from '../ResetPassword'
+import VideoRecipe from '../VideoRecipe'
+import ChangeProfile from '../ChangeProfile'
+import NotFound from '../NotFound'
+import EditRecipe from '../EditRecipe'
+import Coba from '../Coba'
 
 const route = () => {
   return (
     <div>
-      {/*selalu gunakan yang pertama  BrowserRouter, Routes dan Route */}
+      {/* selalu gunakan yang pertama  BrowserRouter, Routes dan Route */}
       <BrowserRouter>
         <Routes>
           <Route path="/">
@@ -68,7 +68,7 @@ const route = () => {
         </Routes>
       </BrowserRouter>
     </div>
-  );
-};
+  )
+}
 
-export default route;
+export default route
