@@ -98,7 +98,7 @@ const EditRecipe = () => {
       });
   };
 
-  return(
+  return (
     <div>
       <Head>
         <title>Edit Recipe</title>
