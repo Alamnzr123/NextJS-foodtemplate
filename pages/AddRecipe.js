@@ -1,67 +1,67 @@
-import { useState, useRef, useEffect } from 'react'
-import Navbar from './Navigation'
-import axios from 'axios'
-import jwt_decode from 'jwt-decode'
-import Footer from './footer/Footer3'
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+import { useState, useRef, useEffect } from "react";
+import Navbar from "./Navigation";
+import axios from "axios";
+import jwt_decode from "jwt-decode";
+import Footer from "./footer/Footer3";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 
 const AddRecipe = () => {
-  const hiddenFileInput = useRef(null)
-  const [image, setImage] = useState('')
+  const hiddenFileInput = useRef(null);
+  const [image, setImage] = useState("");
 
   const [form, setForm] = useState({
-    title: '',
-    ingredients: '',
-    video: ''
-  })
+    title: "",
+    ingredients: "",
+    video: "",
+  });
 
   const onChangeInput = (e, field) => {
     setForm({
       ...form,
-      [field]: e.target.value
-    })
-  }
+      [field]: e.target.value,
+    });
+  };
 
   const handleClick = (event) => {
-    hiddenFileInput.current.click()
-  }
+    hiddenFileInput.current.click();
+  };
 
   const handleChange = (event) => {
-    const fileUploaded = event.target.files[0]
-    document.getElementById('customBtn').innerHTML = fileUploaded.name
-    setImage(fileUploaded)
+    const fileUploaded = event.target.files[0];
+    document.getElementById("customBtn").innerHTML = fileUploaded.name;
+    setImage(fileUploaded);
     // props.handleFile(fileUploaded);
-  }
+  };
 
   const onSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const formData = new FormData()
-    const { title, ingredients, video } = form
-    const token = localStorage.getItem('token')
-    const decoded = jwt_decode(token)
+    const formData = new FormData();
+    const { title, ingredients, video } = form;
+    const token = localStorage.getItem("token");
+    const decoded = jwt_decode(token);
 
-    formData.append('title', title)
-    formData.append('image', image)
-    formData.append('ingredients', ingredients)
-    formData.append('video', video)
-    formData.append('user_id', decoded.id)
+    formData.append("title", title);
+    formData.append("image", image);
+    formData.append("ingredients", ingredients);
+    formData.append("video", video);
+    formData.append("user_id", decoded.id);
 
-    console.log(formData)
+    console.log(formData);
 
     axios
       .post(`${process.env.REACT_APP_BACKEND_URL}/insert/recipe`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
-          'Content-Type': 'multipart/form-data'
-        }
+          "Content-Type": "multipart/form-data",
+        },
       })
       .then((response) => {
-        console.log(response)
-        alert(response.data.message)
-        return <Link href="/profile" />
+        console.log(response);
+        alert(response.data.message);
+        return (<Link href="/profile" />);
         // if(response.data.status !== "success") {
         //   alert("error axios")
         //   // alert(response.data.status+": "+response.data.message)
@@ -70,15 +70,15 @@ const AddRecipe = () => {
         // }
       })
       .catch((err) => {
-        alert('error')
-      })
-  }
+        alert("error");
+      });
+  };
 
   useEffect(() => {
-    if (!localStorage.getItem('token')) {
-      return <Link href="/login" />
+    if (!localStorage.getItem("token")) {
+      return (<Link href="/login" />);
     }
-  }, [])
+  }, []);
 
   return (
     <div>
@@ -109,26 +109,26 @@ const AddRecipe = () => {
           type="file"
           ref={hiddenFileInput}
           onChange={handleChange}
-          style={{ display: 'none' }}
+          style={{ display: "none" }}
         />
         <input
           type="text"
           className="Rectangle330_add"
           placeholder="Title"
-          onChange={(e) => onChangeInput(e, 'title')}
+          onChange={(e) => onChangeInput(e, "title")}
           required
         />
         <textarea
           className="Rectangle331_add"
           placeholder="Ingredients"
-          onChange={(e) => onChangeInput(e, 'ingredients')}
+          onChange={(e) => onChangeInput(e, "ingredients")}
           required
         ></textarea>
         <input
           type="text"
           className="Rectangle332_add"
           placeholder="Video"
-          onChange={(e) => onChangeInput(e, 'video')}
+          onChange={(e) => onChangeInput(e, "video")}
           required
         ></input>
         <button type="submit" className="btnrectangle27">
@@ -138,7 +138,7 @@ const AddRecipe = () => {
 
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default AddRecipe
+export default AddRecipe;

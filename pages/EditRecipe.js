@@ -1,91 +1,91 @@
-import { useState, useRef, useEffect } from 'react'
-import Navbar from './Navigation'
-import axios from 'axios'
-import { useNavigate, useParams } from 'react-router-dom'
-import jwt_decode from 'jwt-decode'
-import Footer from './footer/Footer3'
-import Head from 'next/head'
-import Image from 'next/image'
+import { useState, useRef, useEffect } from "react";
+import Navbar from "./Navigation";
+import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+import Footer from "./footer/Footer3";
+import Head from "next/head";
+import Image from "next/image";
 
 const EditRecipe = () => {
-  const hiddenFileInput = useRef(null)
-  const navigate = useNavigate()
+  const hiddenFileInput = useRef(null);
+  const navigate = useNavigate();
 
-  const [title, setTitle] = useState('')
-  const [image, setImage] = useState('')
-  const [fileImage, setFileImage] = useState(null)
-  const [ingredients, setIngredients] = useState('')
-  const [video, setVideo] = useState('')
-  const { id } = useParams()
+  const [title, setTitle] = useState("");
+  const [image, setImage] = useState("");
+  const [fileImage, setFileImage] = useState(null);
+  const [ingredients, setIngredients] = useState("");
+  const [video, setVideo] = useState("");
+  const { id } = useParams();
 
   // react-lifecycle
   useEffect(() => {
     try {
-      const token = localStorage.getItem('token')
+      const token = localStorage.getItem("token");
       axios
         .get(`${process.env.REACT_APP_BACKEND_URL}/show/myrecipe`, {
           headers: {
-            Authorization: `Bearer ${token}`
-          }
+            Authorization: `Bearer ${token}`,
+          },
         })
         .then((res) => {
-          console.log(res.data)
-          setTitle(res.data.data[0].title)
+          console.log(res.data);
+          setTitle(res.data.data[0].title);
           setImage(
             `${process.env.REACT_APP_BACKEND_URL}/uploads/recipe/${res.data.data[0].image}`
-          )
-          setIngredients(res.data.data[0].ingredients)
-          setVideo(res.data.data[0].video)
+          );
+          setIngredients(res.data.data[0].ingredients);
+          setVideo(res.data.data[0].video);
         })
         .catch((err) => {
-          console.log(err)
-        })
+          console.log(err);
+        });
       // document.getElementById('customBtn').innerHTML = image;
     } catch (error) {
-      console.log(error.message)
+      console.log(error.message);
     }
-  }, [id])
+  }, [id]);
 
   const handleClick = (event) => {
-    hiddenFileInput.current.click()
-  }
+    hiddenFileInput.current.click();
+  };
 
   const handleChange = (event) => {
-    const fileUploaded = event.target.files[0]
-    const urlImage = URL.createObjectURL(fileUploaded)
-    console.log(fileUploaded)
-    document.getElementById('customBtn').innerHTML = fileUploaded.name
-    setFileImage(fileUploaded)
-    setImage(urlImage)
+    const fileUploaded = event.target.files[0];
+    const urlImage = URL.createObjectURL(fileUploaded);
+    console.log(fileUploaded);
+    document.getElementById("customBtn").innerHTML = fileUploaded.name;
+    setFileImage(fileUploaded);
+    setImage(urlImage);
     // props.handleFile(fileUploaded);
-  }
+  };
 
   const onSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const formData = new FormData()
-    const token = localStorage.getItem('token')
-    const decoded = jwt_decode(token)
+    const formData = new FormData();
+    const token = localStorage.getItem("token");
+    const decoded = jwt_decode(token);
 
-    formData.append('title', title)
-    formData.append('image', fileImage)
-    formData.append('ingredients', ingredients)
-    formData.append('video', video)
-    formData.append('user_id', decoded.id)
+    formData.append("title", title);
+    formData.append("image", fileImage);
+    formData.append("ingredients", ingredients);
+    formData.append("video", video);
+    formData.append("user_id", decoded.id);
 
-    console.log(formData)
+    console.log(formData);
 
     axios
       .put(`${process.env.REACT_APP_BACKEND_URL}/edit/recipe/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
-          'Content-Type': 'multipart/form-data'
-        }
+          "Content-Type": "multipart/form-data",
+        },
       })
       .then((response) => {
-        console.log(response)
-        alert(response.data.message)
-        return navigate('/profile')
+        console.log(response);
+        alert(response.data.message);
+        return navigate("/profile");
         // if(response.data.status !== "success") {
         //   alert("error axios")
         //   // alert(response.data.status+": "+response.data.message)
@@ -94,11 +94,11 @@ const EditRecipe = () => {
         // }
       })
       .catch((err) => {
-        alert(err)
-      })
-  }
+        alert(err);
+      });
+  };
 
-  return (
+  return(
     <div>
       <Head>
         <title>Edit Recipe</title>
@@ -114,7 +114,7 @@ const EditRecipe = () => {
           <div>
             <Image
               className="image_add"
-              src={image || '/Assets/image-solid.svg'}
+              src={image || "/Assets/image-solid.svg"}
               alt="Gambar1"
             />
           </div>
@@ -126,7 +126,7 @@ const EditRecipe = () => {
           type="file"
           ref={hiddenFileInput}
           onChange={handleChange}
-          style={{ display: 'none' }}
+          style={{ display: "none" }}
         />
 
         <input
@@ -159,7 +159,7 @@ const EditRecipe = () => {
 
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default EditRecipe
+export default EditRecipe;

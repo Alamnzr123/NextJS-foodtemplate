@@ -17,7 +17,7 @@ const Coba = () => {
   })
 
   return (
-    <>
+    <div> 
       {list.map()}
       <ul>
         {list.map((e, i) => (
@@ -26,7 +26,7 @@ const Coba = () => {
           </a>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
 

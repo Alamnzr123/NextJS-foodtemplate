@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 const ForgotPassword = () => {
-  return (
+  return(
     <div>
       <Head>
         <title>Forgot Password</title>
