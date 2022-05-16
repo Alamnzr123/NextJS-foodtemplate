@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Container } from 'reactstrap'
+import React from 'react';
+import styled from 'styled-components';
+import { Container } from 'reactstrap';
 
 const Section = styled.footer`
   background-color: var(--secondary-color);

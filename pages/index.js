@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Link from 'next/link'
-export default function Home () {
+import Head from "next/head";
+import Link from "next/link";
+export default function Home() {
   return (
     <div className="container">
       <Head>
@@ -10,7 +10,7 @@ export default function Home () {
 
       <main>
         <h1 className="title">
-          Iya bos baru belajar{' '}
+          Iya bos baru belajar{" "}
           <Link href="/AddRecipe">
             <a>Next.js!</a>
           </Link>
@@ -207,5 +207,5 @@ export default function Home () {
         }
       `}</style>
     </div>
-  )
+  );
 }
