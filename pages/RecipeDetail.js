@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import Gambar1 from "../public/assets/4da51338c06dd21688b82eae3bc9dfa6.jpg";
-import Gambar2 from "../public/assets/c08f710828e1d2aacf71af8c92583062.png";
 import { Link } from "react-router-dom";
 import Navbar from "./Navigation";
 import Footer from "./footer/Footer4";
 import Head from "next/head";
+import Image from "next/image";
 
 const RecipeDetail = () => {
   return (
@@ -17,7 +16,11 @@ const RecipeDetail = () => {
         <Navbar />
         <h1 className="text_loreamsandwich">Loream Sandwich</h1>
         <div>
-          <img className="Rectangle313_3" src={Gambar1} alt="Gambar1" />
+          <Image
+            src="/assets/4da51338c06dd21688b82eae3bc9dfa6.jpg"
+            alt="Gambar1"
+          />
+          {/* <img className="Rectangle313_3" src={Gambar1} alt="Gambar1" /> */}
         </div>
       </header>
 
@@ -72,7 +75,11 @@ const RecipeDetail = () => {
           Nice recipe. simple and delicious, thankyou
         </h2>
         <div>
-          <img className="ellipse128_detail" src={Gambar2} alt="Gambar2" />
+          <Image
+            src="/assets/c08f710828e1d2aacf71af8c92583062.png"
+            alt="Gambar2"
+          />
+          {/* <img className="ellipse128_detail" src={Gambar2} /> */}
         </div>
       </section>
 

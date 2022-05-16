@@ -6,10 +6,6 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 import Footer from "./footer/Footer";
 import swal from "sweetalert";
-import Gambar1 from "../../assets/4662c85cb7661f579e2c9baff0ce5fdc.png";
-import Gambar2 from "../../assets/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg";
-import Gambar3 from "../../assets/65940ba73f12f048d870dfa487a052df.jpg";
-import Gambar4 from "../../assets/logo_pencil.svg";
 import {
   Container,
   Nav,
@@ -24,6 +20,7 @@ import {
 } from "reactstrap";
 import classnames from "classnames";
 import Head from "next/head";
+import Gambar from "next/image";
 
 const Section = styled.section`
   margin: 0 auto;
@@ -202,15 +199,20 @@ const Profile = () => {
     <>
       <Head>
         <title>Profile</title>
-        <link rel="icon" href="/Assets/logo.svg" />
+        <link rel="icon" href="/assets/logo.svg" />
       </Head>
       <ListNavbar />
       <Container fluid>
         <Section>
           <div className="d-flex justify-content-center">
             <div className="position-relative">
-              <Photo src={Gambar1} alt="username" />
-              <Icon src={Gambar4} alt="Icon" />
+              <Gambar
+                style="/assets/4662c85cb7661f579e2c9baff0ce5fdc.png"
+                alt="username"
+              />
+              {/* <Photo /> */}
+              <Gambar src="/assets/logo_pencil.svg" alt="icon" />
+              {/* <Icon src={Gambar4} alt="Icon" /> */}
             </div>
           </div>
           <Username>Garneta Sharina</Username>
@@ -298,7 +300,11 @@ const Profile = () => {
                 <Col>
                   <Card className="border-0">
                     <CardBody className="p-0">
-                      <Image src={Gambar2} alt="Gambar2" />
+                      <Gambar
+                        src="/assets/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg"
+                        alt="Gambar2"
+                      />
+                      {/* <Image src={Gambar2} alt="Gambar2" /> */}
                       <Title>Chicken</Title>
                       <Option>
                         <Link to={"/recipe/:id"} className="btn-view">
@@ -318,7 +324,11 @@ const Profile = () => {
                 <Col>
                   <Card className="border-0">
                     <CardBody className="p-0">
-                      <Image src={Gambar2} alt="Chicken" />
+                      <Gambar
+                        src="/assets/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg"
+                        alt="Chicken"
+                      />
+                      {/* <Image src={Gambar2} alt="Chicken" /> */}
                       <Title>Chicken</Title>
                       <Option>
                         <Link to="/recipe" className="btn-view">

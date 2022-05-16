@@ -1,8 +1,7 @@
 import React from "react";
 import Navbar from "./Navigation";
-import Gambar2 from "../public/assets/18ba457b82b3cae12e47df24ad8cf636.jpg";
-import Gambar3 from "../public/assets/dba40d04b40f63ec9dfa861a18f1591a.jpg";
 import Head from "next/head";
+import Image from "next/image";
 
 const VideoRecipe = () => {
   return (
@@ -28,7 +27,10 @@ const VideoRecipe = () => {
 
         <h1 className="text_next">Next</h1>
         <div>
-          <img className="Rectangle90" src={Gambar2} />
+          <Image
+            className="Rectangle90"
+            src="/assets/18ba457b82b3cae12e47df24ad8cf636.jpg"
+          />
           <h1 className="text_step5">[Step 5]</h1>
           <h1 className="text_beef_steak">
             Beef Steak with Curry Sauce - [Step 5] <br />
@@ -37,7 +39,10 @@ const VideoRecipe = () => {
           <h2 className="text_hana">HanaLohana - 3 month ago</h2>
         </div>
         <div>
-          <img className="Rectangle91" src={Gambar3} />
+          <Image
+            className="Rectangle91"
+            src="/assets/dba40d04b40f63ec9dfa861a18f1591a.jpg"
+          />
           <h1 className="text_step6">[Step 6]</h1>
           <h1 className="text_beef_steak2">
             Beef Steak with Curry Sauce - [Step 6]
@@ -47,7 +52,10 @@ const VideoRecipe = () => {
         </div>
 
         <div>
-          <img className="Rectangle330_videodetail" src={Gambar3} />
+          <Image
+            className="Rectangle330_videodetail"
+            src="/assets/dba40d04b40f63ec9dfa861a18f1591a.jpg"
+          />
           <h1 className="text_step7">[Step 7]</h1>
           <h1 className="text_beef_steak3">
             Beef Steak with Curry Sauce - [Step 7]

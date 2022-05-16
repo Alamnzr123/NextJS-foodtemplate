@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Gambar1 from "../public/assets/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import { toast } from "react-toastify";
 import axios from "axios";
 import Head from "next/head";
+import Image from "next/image";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -85,7 +85,7 @@ const Register = () => {
         <div className="col-md-6 Auth_bg__o9fLW_Register">
           <div className="mask_bg_register"></div>
           <div className="background_register_logo">
-            <img src={Gambar1} />
+            <Image src="/assets/logo.svg" />
           </div>
         </div>
         <div className="col-md-6 px-0">
