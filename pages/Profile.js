@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import ListNavbar from './Navigation'
-import styled from 'styled-components'
-import { Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import jwt_decode from 'jwt-decode'
-import Footer from './footer/Footer'
-import swal from 'sweetalert'
-import Gambar1 from '../Assets/4662c85cb7661f579e2c9baff0ce5fdc.png'
-import Gambar2 from '../Assets/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg'
-import Gambar3 from '../Assets/65940ba73f12f048d870dfa487a052df.jpg'
-import Gambar4 from '../Assets/logo_pencil.svg'
+import React, { useState, useEffect } from "react";
+import ListNavbar from "./Navigation";
+import styled from "styled-components";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import jwt_decode from "jwt-decode";
+import Footer from "./footer/Footer";
+import swal from "sweetalert";
+import Gambar1 from "/assets/4662c85cb7661f579e2c9baff0ce5fdc.png";
+import Gambar2 from "/assets/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg";
+import Gambar3 from "/assets/65940ba73f12f048d870dfa487a052df.jpg";
+import Gambar4 from "/assets/logo_pencil.svg";
 import {
   Container,
   Nav,
@@ -20,10 +20,10 @@ import {
   Row,
   Col,
   Card,
-  CardBody
-} from 'reactstrap'
-import classnames from 'classnames'
-import Head from 'next/head'
+  CardBody,
+} from "reactstrap";
+import classnames from "classnames";
+import Head from "next/head";
 
 const Section = styled.section`
   margin: 0 auto;
@@ -33,7 +33,7 @@ const Section = styled.section`
   @media screen and (max-width: 576px) {
     margin-top: 90px;
   }
-`
+`;
 
 const Photo = styled.img`
   height: 150px;
@@ -41,7 +41,7 @@ const Photo = styled.img`
   background-position: center;
   background-size: cover;
   border-radius: 50%;
-`
+`;
 
 const Icon = styled.img`
   position: absolute;
@@ -51,7 +51,7 @@ const Icon = styled.img`
   &:hover {
     cursor: pointer;
   }
-`
+`;
 
 const Username = styled.p`
   font-size: 24px;
@@ -59,7 +59,7 @@ const Username = styled.p`
   font-weight: 500;
   text-align: center;
   margin-top: 15px;
-`
+`;
 
 const Action = styled.div`
   margin: 0 auto;
@@ -69,7 +69,7 @@ const Action = styled.div`
   background-color: #e7e7e7;
   position: relative;
   transition: 0.5s;
-`
+`;
 
 const Button = styled.button`
   border: none;
@@ -79,7 +79,7 @@ const Button = styled.button`
   color: #3f3a3a;
   font-size: 14px;
   border-radius: 15px;
-`
+`;
 
 const Menu = styled.div`
   margin-top: 10px;
@@ -92,7 +92,7 @@ const Menu = styled.div`
     margin-top: 20px;
     padding: 10px;
   }
-`
+`;
 
 const Image = styled.img`
   width: 270px;
@@ -100,7 +100,7 @@ const Image = styled.img`
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
-`
+`;
 
 const Title = styled.p`
   width: 150px;
@@ -110,7 +110,7 @@ const Title = styled.p`
   position: absolute;
   bottom: 0;
   left: 15px;
-`
+`;
 
 const Option = styled.div`
   position: absolute;
@@ -121,82 +121,82 @@ const Option = styled.div`
     top: 10px;
     right: 70px;
   }
-`
+`;
 
 const Profile = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   // State for current active Tab
-  const [activeTab, setActiveTab] = useState('1')
+  const [activeTab, setActiveTab] = useState("1");
 
-  const [myRecipe, setMyRecipe] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
+  const [myRecipe, setMyRecipe] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getMyRecipe()
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    getMyRecipe();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getMyRecipe = () => {
     try {
-      const token = localStorage.getItem('token')
+      const token = localStorage.getItem("token");
 
       if (!token) {
-        return navigate('/login')
+        return navigate("/login");
       } else {
-        const decoded = jwt_decode(token)
+        const decoded = jwt_decode(token);
         axios
           .get(`${process.env.REACT_APP_BACKEND_URL}/show/myrecipe/`, {
             headers: {
-              Authorization: `Bearer ${token}`
-            }
+              Authorization: `Bearer ${token}`,
+            },
           })
           .then((res) => {
-            setMyRecipe(res.data.data)
+            setMyRecipe(res.data.data);
           })
           .catch((err) => {
-            console.log(err.res.data)
+            console.log(err.res.data);
           })
           .finally(() => {
-            setIsLoading(false)
-          })
+            setIsLoading(false);
+          });
       }
     } catch (error) {
-      console.log(error.message)
+      console.log(error.message);
     }
-  }
+  };
 
   const deleteRecipe = (id) => {
     swal({
-      title: 'Are you sure?',
-      text: 'Once deleted, you will not be able to recover this recipe',
-      icon: 'warning',
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this recipe",
+      icon: "warning",
       buttons: true,
-      dangerMode: true
+      dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        const token = localStorage.getItem('token')
+        const token = localStorage.getItem("token");
         axios
           .delete(`${process.env.REACT_APP_BACKEND_URL}/delete/recipe/${id}`, {
             headers: {
-              Authorization: `Bearer ${token}`
-            }
+              Authorization: `Bearer ${token}`,
+            },
           })
           .then((res) => {
-            console.log(res.data)
+            console.log(res.data);
             swal({
-              title: 'Success!',
+              title: "Success!",
               text: res.data.message,
-              icon: 'success'
-            })
-            getMyRecipe()
+              icon: "success",
+            });
+            getMyRecipe();
           })
           .catch((err) => {
             swal(err.response.data.message, {
-              icon: 'error'
-            })
-          })
+              icon: "error",
+            });
+          });
       }
-    })
-  }
+    });
+  };
 
   return (
     <>
@@ -218,7 +218,7 @@ const Profile = () => {
             <Button className="d-block">Change Photo Profile</Button>
             <Link
               to="/user/change-password/:id"
-              style={{ textDecoration: 'none' }}
+              style={{ textDecoration: "none" }}
             >
               <Button className="d-block">Change Password</Button>
             </Link>
@@ -228,24 +228,24 @@ const Profile = () => {
           <Nav tabs>
             <NavItem>
               <NavLink
-                className={activeTab == '1' ? 'active' : ''}
-                onClick={() => setActiveTab('1')}
+                className={activeTab == "1" ? "active" : ""}
+                onClick={() => setActiveTab("1")}
               >
                 My Recipe
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                className={activeTab == '2' ? 'active' : ''}
-                onClick={() => setActiveTab('2')}
+                className={activeTab == "2" ? "active" : ""}
+                onClick={() => setActiveTab("2")}
               >
                 Saved Recipe
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                className={activeTab == '3' ? 'active' : ''}
-                onClick={() => setActiveTab('3')}
+                className={activeTab == "3" ? "active" : ""}
+                onClick={() => setActiveTab("3")}
               >
                 Liked Recipe
               </NavLink>
@@ -255,12 +255,10 @@ const Profile = () => {
           <TabContent activeTab={activeTab}>
             <TabPane tabId="1">
               <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gy-2 gx-4 mt-4 ml-5">
-                {isLoading
-                  ? (
+                {isLoading ? (
                   <div>Loading...</div>
-                    )
-                  : (
-                      myRecipe.map((e, i) => (
+                ) : (
+                  myRecipe.map((e, i) => (
                     <Col key={i}>
                       <Card className="border-0">
                         <CardBody className="p-0">
@@ -290,8 +288,8 @@ const Profile = () => {
                         </CardBody>
                       </Card>
                     </Col>
-                      ))
-                    )}
+                  ))
+                )}
               </Row>
             </TabPane>
 
@@ -303,7 +301,7 @@ const Profile = () => {
                       <Image src={Gambar2} alt="Gambar2" />
                       <Title>Chicken</Title>
                       <Option>
-                        <Link to={'/recipe/:id'} className="btn-view">
+                        <Link to={"/recipe/:id"} className="btn-view">
                           <i class="fa-solid fa-eye"></i>
                         </Link>
                         <Link to="/recipe/:id" className="btn-delete">
@@ -340,7 +338,7 @@ const Profile = () => {
       </Container>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

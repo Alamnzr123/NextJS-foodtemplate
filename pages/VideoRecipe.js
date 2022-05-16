@@ -1,8 +1,8 @@
-import React from 'react'
-import Navbar from './Navigation'
-import Gambar2 from '../Assets/18ba457b82b3cae12e47df24ad8cf636.jpg'
-import Gambar3 from '../Assets/dba40d04b40f63ec9dfa861a18f1591a.jpg'
-import Head from 'next/head'
+import React from "react";
+import Navbar from "./Navigation";
+import Gambar2 from "/assets/18ba457b82b3cae12e47df24ad8cf636.jpg";
+import Gambar3 from "/assets/dba40d04b40f63ec9dfa861a18f1591a.jpg";
+import Head from "next/head";
 
 const VideoRecipe = () => {
   return (
@@ -57,7 +57,7 @@ const VideoRecipe = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default VideoRecipe
+export default VideoRecipe;

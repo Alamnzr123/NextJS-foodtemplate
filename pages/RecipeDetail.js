@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import Gambar1 from '../Assets/4da51338c06dd21688b82eae3bc9dfa6.jpg'
-import Gambar2 from '../Assets/c08f710828e1d2aacf71af8c92583062.png'
-import { Link } from 'react-router-dom'
-import Navbar from './Navigation'
-import Footer from './footer/Footer4'
-import Head from 'next/head'
+import React, { Component } from "react";
+import Gambar1 from "/assets/4da51338c06dd21688b82eae3bc9dfa6.jpg";
+import Gambar2 from "/assets/c08f710828e1d2aacf71af8c92583062.png";
+import { Link } from "react-router-dom";
+import Navbar from "./Navigation";
+import Footer from "./footer/Footer4";
+import Head from "next/head";
 
 const RecipeDetail = () => {
   return (
@@ -78,7 +78,7 @@ const RecipeDetail = () => {
 
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default RecipeDetail
+export default RecipeDetail;
