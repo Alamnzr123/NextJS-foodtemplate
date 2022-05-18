@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Container } from 'reactstrap';
+import React from "react";
+import styled from "styled-components";
+import { Container } from "reactstrap";
 
 const Section = styled.footer`
   background-color: var(--secondary-color);
@@ -11,7 +11,7 @@ const Section = styled.footer`
   width: 100%;
   position: absolute;
   text-align: center;
-`
+`;
 
 const Title = styled.h2`
   font-size: 64px;
@@ -20,7 +20,7 @@ const Title = styled.h2`
   @media screen and (max-width: 500px) {
     font-size: 40px;
   }
-`
+`;
 
 const Description = styled.p`
   font-size: 22px;
@@ -30,12 +30,12 @@ const Description = styled.p`
   @media screen and (max-width: 500px) {
     font-size: 16px;
   }
-`
+`;
 
 const List = styled.div`
   margin-top: 150px;
   padding-left: 6vw;
-`
+`;
 
 const Item = styled.a`
   display: inline-block;
@@ -48,7 +48,7 @@ const Item = styled.a`
   @media screen and (max-width: 500px) {
     font-size: 14px;
   }
-`
+`;
 
 const Copyright = styled.div`
   font-size: 14px;
@@ -59,7 +59,7 @@ const Copyright = styled.div`
     text-align: center;
     float: none;
   }
-`
+`;
 
 const Footer = () => {
   return (
@@ -80,7 +80,7 @@ const Footer = () => {
         </List>
       </Container>
     </Section>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
