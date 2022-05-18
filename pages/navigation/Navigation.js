@@ -71,7 +71,7 @@ const Navigation = () => {
           <Image src="/assets/User icon.png" alt="user icon" layout="fill" />
           <Link href="/landingpage/Profile">{decoded.name}</Link>
           <button title="Logout" onClick={logout}>
-            <i class="fa-solid fa-right-from-bracket"></i>
+            <i className="fa-solid fa-right-from-bracket"></i>
           </button>
         </div>
       );

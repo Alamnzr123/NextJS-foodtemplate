@@ -13,7 +13,7 @@ const ResetPassword = () => {
         <div className="col-md-6 Auth_bg__o9fLW">
           <div className="mask_bg"></div>
           <div className="background_login_logo">
-            <Image src="/assets/logo.svg" layout="fill" />
+            <Image src="/assets/logo.svg" alt="user icon" layout="fill" />
           </div>
         </div>
         <div className="col-md-6 px-0">
@@ -24,7 +24,7 @@ const ResetPassword = () => {
             <form className="SignIn_form__ZAIHo">
               <div>
                 <div className="InputAuth_box__SHTUc">
-                  <label className="form-label" for="email">
+                  <label className="form-label" htmlFor="email">
                     Create New Password
                   </label>
                   <input
@@ -36,7 +36,7 @@ const ResetPassword = () => {
                   />
                 </div>
                 <div className="InputAuth_box__SHTUc">
-                  <label className="form-label" for="password">
+                  <label className="form-label" htmlFor="password">
                     New Password
                   </label>
                   <input
@@ -55,7 +55,10 @@ const ResetPassword = () => {
                     name="checkbox"
                     value="checkbox"
                   />
-                  <label for="checkbox"> I aggree to terms & conditions</label>
+                  <label htmlFor="checkbox">
+                    {" "}
+                    I aggree to terms & conditions
+                  </label>
                 </div>
 
                 <Link href="/login/Login">

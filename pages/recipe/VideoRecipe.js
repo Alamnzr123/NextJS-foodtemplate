@@ -31,6 +31,7 @@ const VideoRecipe = () => {
             <Image
               src="/assets/18ba457b82b3cae12e47df24ad8cf636.jpg"
               layout="fill"
+              alt="Gambar1"
             />
           </div>
           <h1 className="text_step5">[Step 5]</h1>
@@ -45,6 +46,7 @@ const VideoRecipe = () => {
             <Image
               src="/assets/dba40d04b40f63ec9dfa861a18f1591a.jpg"
               layout="fill"
+              alt="Gambar2"
             />
           </div>
           <h1 className="text_step6">[Step 6]</h1>
@@ -60,6 +62,7 @@ const VideoRecipe = () => {
             <Image
               src="/assets/dba40d04b40f63ec9dfa861a18f1591a.jpg"
               layout="fill"
+              alt="Gambar3"
             />
           </div>
           <h1 className="text_step7">[Step 7]</h1>

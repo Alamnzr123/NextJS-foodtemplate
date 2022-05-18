@@ -271,7 +271,7 @@ const Profile = () => {
 
                           <Option>
                             <Link href={`/recipe/${e.id}`} className="btn-view">
-                              <i class="fa-solid fa-eye"></i>
+                              <i className="fa-solid fa-eye"></i>
                             </Link>
                             <Link
                               href={`/editrecipe/${e.id}`}
@@ -306,7 +306,7 @@ const Profile = () => {
                       <Title>Chicken</Title>
                       <Option>
                         <Link href={"/recipe/:id"} className="btn-view">
-                          <i class="fa-solid fa-eye"></i>
+                          <i className="fa-solid fa-eye"></i>
                         </Link>
                         <Link href="/recipe/:id" className="btn-delete">
                           <i className="far fa-trash-can"></i>
@@ -329,7 +329,7 @@ const Profile = () => {
                       <Title>Chicken</Title>
                       <Option>
                         <Link href="/recipe" className="btn-view">
-                          <i class="fa-solid fa-eye"></i>
+                          <i className="fa-solid fa-eye"></i>
                         </Link>
                         <Link href="/recipe/:id" className="btn-delete">
                           <i className="far fa-trash-can"></i>

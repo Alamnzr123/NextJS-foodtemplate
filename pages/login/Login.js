@@ -58,7 +58,7 @@ const Login = () => {
         <div className="col-md-6 Auth_bg__o9fLW ">
           <div className="mask_bg"></div>
           <div className="background_login_logo">
-            <Image src="/assets/logo.svg" layout="fill" />
+            <Image src="/assets/logo.svg" alt="user icon" layout="fill" />
           </div>
         </div>
         <div className="col-md-6 px-0">
@@ -73,7 +73,7 @@ const Login = () => {
               {/* <hr style={{}} /> */}
               <div>
                 <div className="InputAuth_box__SHTUc">
-                  <label className="form-label" for="email">
+                  <label className="form-label" htmlFor="email">
                     E-mail
                   </label>
                   <input
@@ -87,7 +87,7 @@ const Login = () => {
                   />
                 </div>
                 <div className="InputAuth_box__SHTUc">
-                  <label className="form-label" for="password">
+                  <label className="form-label" htmlFor="password">
                     Password
                   </label>
                   <input
@@ -108,7 +108,7 @@ const Login = () => {
                     name="terms"
                     onChange={(e) => onChangeInput(e.target.checked, "terms")}
                   />
-                  <label for="terms" style={{ left: "100px" }}>
+                  <label htmlFor="terms" style={{ left: "100px" }}>
                     {" "}
                     I aggree to terms & conditions
                   </label>
@@ -136,7 +136,7 @@ const Login = () => {
                     top: "50px",
                   }}
                 >
-                  Don't have an account?{" "}
+                  Don&apos;t have an account?{" "}
                   <Link
                     href="/login/Register"
                     style={{ textDecoration: "none", color: "#EFC81A" }}

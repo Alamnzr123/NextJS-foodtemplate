@@ -15,7 +15,7 @@ const ResetPasswordCode = () => {
           <div className="col-md-6 Auth_bg__o9fLW">
             <div className="mask_bg"></div>
             <div className="background_login_logo">
-              <Image src="/assets/logo.svg" layout="fill" />
+              <Image src="/assets/logo.svg" alt="user icon" layout="fill" />
             </div>
           </div>
           <div className="col-md-6 px-0">
@@ -26,7 +26,7 @@ const ResetPasswordCode = () => {
               <form className="SignIn_form__ZAIHo">
                 <div className="fp">
                   <div className="InputAuth_box__SHTUc">
-                    <label className="form-label" for="email">
+                    <label className="form-label" htmlFor="email">
                       Code 6 Digit
                     </label>
                     <input

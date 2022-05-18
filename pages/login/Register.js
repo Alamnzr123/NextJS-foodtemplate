@@ -86,7 +86,7 @@ const Register = () => {
         <div className="col-md-6 Auth_bg__o9fLW_Register">
           <div className="mask_bg_register"></div>
           <div className="background_register_logo">
-            <Image src="/assets/logo.svg" layout="fill" />
+            <Image src="/assets/logo.svg" alt="user icon" layout="fill" />
           </div>
         </div>
         <div className="col-md-6 px-0">
@@ -100,12 +100,12 @@ const Register = () => {
               onSubmit={(e) => onSubmit(e)}
               className="SignIn_form__ZAIHo"
             >
-              <span>Let's Get Started !</span>
+              <span>Let&apos;s Get Started !</span>
               <br />
               <p>Create new account to access all features</p>
               <div>
                 <div className="InputAuth_box__SHTUc">
-                  <label className="form-label" for="name">
+                  <label className="form-label" htmlFor="name">
                     Name
                   </label>
                   <input
@@ -119,7 +119,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="InputAuth_box__SHTUc">
-                  <label className="form-label" for="email">
+                  <label className="form-label" htmlFor="email">
                     Email address*
                   </label>
                   <input
@@ -133,7 +133,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="InputAuth_box__SHTUc">
-                  <label className="form-label" for="phone">
+                  <label className="form-label" htmlFor="phone">
                     Phone Number
                   </label>
                   <input
@@ -147,7 +147,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="InputAuth_box__SHTUc">
-                  <label className="form-label" for="password1">
+                  <label className="form-label" htmlFor="password1">
                     Create New Password
                   </label>
                   <input
@@ -161,7 +161,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="InputAuth_box__SHTUc">
-                  <label className="form-label" for="password2">
+                  <label className="form-label" htmlFor="password2">
                     New Password
                   </label>
                   <input
@@ -183,7 +183,7 @@ const Register = () => {
                     id="terms"
                     onChange={(e) => onChangeInput(e.target.checked, "terms")}
                   />
-                  <label for="terms"> I aggree to terms & Conditions</label>
+                  <label htmlFor="terms"> I aggree to terms & Conditions</label>
                   <br />
                 </div>
 
