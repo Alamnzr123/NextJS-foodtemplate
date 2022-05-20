@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import Navbar from "../navigation/Navigation";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useParams } from "react-router-dom";
@@ -109,7 +108,6 @@ const EditRecipe = () => {
         <title>Edit Recipe</title>
         <link rel="icon" href="/assets/logo.svg" />
       </Head>
-      <Navbar />
       <form
         method="post"
         encType="multipart/form-data"

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ListNavbar from "../navigation/Navigation";
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -205,7 +204,6 @@ const Profile = () => {
         <title>Profile</title>
         <link rel="icon" href="/assets/logo.svg" />
       </Head>
-      <ListNavbar />
       <Container fluid>
         <Section>
           <div className="d-flex justify-content-center">

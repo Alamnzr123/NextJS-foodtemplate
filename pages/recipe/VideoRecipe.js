@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../navigation/Navigation";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -10,7 +9,6 @@ const VideoRecipe = () => {
         <title>Video Recipe</title>
         <link rel="icon" href="/assets/logo.svg" />
       </Head>
-      <Navbar />
       <section>
         <div className="Rectangle_detailvideo"></div>
         <div>

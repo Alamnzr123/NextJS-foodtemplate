@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../navigation/Navigation";
 import Footer from "../footer/Footer2";
 import Head from "next/head";
 import Image from "next/image";
@@ -10,11 +9,10 @@ const Home = () => {
     <>
       <Head>
         <title>Landing Page</title>
-        <link rel="icon" href="/assets/logo.svg" />
+        <link rel="icon" href="/path/logo.svg" />
       </Head>
       <div className="Slider">
         <div className="Rectangle2"></div>
-        <Navbar />
         <div className="LandingPage_gambar1"></div>
         <div className="Rectangle3">
           <i className="Vector"></i>
@@ -45,7 +43,7 @@ const Home = () => {
           <div className="Rectangle309"></div>
           <div className="Rectangle313">
             <Image
-              src="/assets/52207741d95649c4cb58a57ba663027f.jpg"
+              src="/path/52207741d95649c4cb58a57ba663027f.jpg"
               alt="Gambar1"
               width="830px"
               height="830px"
@@ -64,7 +62,7 @@ const Home = () => {
               alt="Gambar2"
               style={{ borderRadius: "15px" }}
               objectFit="cover"
-              src="/assets/c2792cef25a0bfa97a2bd8c65b80f9c5.jpg"
+              src="/path/c2792cef25a0bfa97a2bd8c65b80f9c5.jpg"
               width="800px"
               height="800px"
             />
@@ -88,7 +86,7 @@ const Home = () => {
           <div className="Rectangle8"></div>
           <div className="Rectangle314_2">
             <Image
-              src="/assets/572da9a89bc5f8fe0da12c9a18c352e7.jpg"
+              src="/path/572da9a89bc5f8fe0da12c9a18c352e7.jpg"
               alt="Gambar3"
               style={{ borderRadius: "15px" }}
               width="500px"
@@ -99,7 +97,7 @@ const Home = () => {
           <div className="chicken_kare">Chiken Kare</div>
           <div className="Rectangle315_2">
             <Image
-              src="/assets/cd160da3e1426c3f659218e145224ffc.jpg"
+              src="/path/cd160da3e1426c3f659218e145224ffc.jpg"
               alt="Gambar4"
               style={{ borderRadius: "15px" }}
               width="500px"
@@ -110,7 +108,7 @@ const Home = () => {
           <div className="text_bombchicken">Bomb Chicken</div>
           <div className="Rectangle316_2">
             <Image
-              src="/assets/7c36ec9fa871caac4eb5b3658eea9aaa.jpg"
+              src="/path/7c36ec9fa871caac4eb5b3658eea9aaa.jpg"
               alt="Gambar5"
               style={{ borderRadius: "15px" }}
               width="500px"
@@ -123,7 +121,7 @@ const Home = () => {
           </div>
           <div className="Rectangle317_2">
             <Image
-              src="/assets/19713936f65f2db089da584640f4b823.jpg"
+              src="/path/19713936f65f2db089da584640f4b823.jpg"
               alt="Gambar6"
               style={{ borderRadius: "15px" }}
               width="500px"
@@ -136,7 +134,7 @@ const Home = () => {
           </div>
           <div className="Rectangle318_2">
             <Image
-              src="/assets/ec253e0e662a4e3aa070cee5202021e3.jpg"
+              src="/path/ec253e0e662a4e3aa070cee5202021e3.jpg"
               alt="Gambar7"
               style={{ borderRadius: "15px" }}
               width="500px"
@@ -147,7 +145,7 @@ const Home = () => {
           <div className="text_sugarsalmon">Sugar Salmon</div>
           <div className="Rectangle319_2">
             <Image
-              src="/assets/bb6555764d018e0687640abdfde17ba9.jpg"
+              src="/path/bb6555764d018e0687640abdfde17ba9.jpg"
               alt="Gambar8"
               style={{ borderRadius: "15px" }}
               width="500px"

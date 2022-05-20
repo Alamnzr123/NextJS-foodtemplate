@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import Navbar from "../navigation/Navigation";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 import Footer from "../footer/Footer3";
@@ -86,8 +85,6 @@ const AddRecipe = () => {
         <title>Add Recipe</title>
         <link rel="icon" href="/assets/logo.svg" />
       </Head>
-
-      <Navbar />
       <form
         method="post"
         encType="multipart/form-data"

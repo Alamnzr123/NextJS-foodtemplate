@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Navbar from "../navigation/Navigation";
 import Footer from "../footer/Footer4";
 import Head from "next/head";
 import Image from "next/image";
@@ -13,7 +12,6 @@ const RecipeDetail = () => {
         <link rel="icon" href="/Assets/logo.svg" />
       </Head>
       <header>
-        <Navbar />
         <h1 className="text_loreamsandwich">Loream Sandwich</h1>
         <div className="Rectangle313_3">
           <Image
