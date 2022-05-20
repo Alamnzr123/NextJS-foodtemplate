@@ -44,7 +44,7 @@ const Register = () => {
         phone: form.phone,
       };
       axios
-        .post(`${process.env.REACT_APP_BACKEND_URL}/register`, body, {
+        .post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/register`, body, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -55,7 +55,7 @@ const Register = () => {
             text: res.data.message,
             icon: "success",
           }).then(() => {
-            router.push("/login");
+            router.push("/login/Login");
           });
         })
         .catch((err) => {

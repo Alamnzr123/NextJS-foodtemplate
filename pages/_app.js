@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import "../styles/StylesHome.js";
-import "../styles/AuthStyles.js";
 
 import "../public/fonts//AirbnbCerealBold.woff";
 import "../public/fonts//AirbnbCerealLight.woff";

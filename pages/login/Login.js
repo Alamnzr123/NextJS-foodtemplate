@@ -30,7 +30,7 @@ const Login = () => {
         password: form.password,
       };
       axios
-        .post(`${process.env.REACT_APP_BACKEND_URL}/login`, body)
+        .post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/login`, body)
         .then((response) => {
           localStorage.setItem("token", response.data.token);
           if (response.data.status !== "success") {
@@ -39,7 +39,7 @@ const Login = () => {
             alert(response.data.message);
             localStorage.setItem("token", response.data.token);
             localStorage.setItem("user_id", response.data.data);
-            return router.push("/");
+            return router.push("/landingpage/Home");
           }
         })
         .catch((err) => {

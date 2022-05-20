@@ -142,7 +142,7 @@ const Profile = () => {
       } else {
         const decoded = jwt_decode(token);
         axios
-          .get(`${process.env.REACT_APP_BACKEND_URL}/show/myrecipe/`, {
+          .get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/show/myrecipe/`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -173,11 +173,14 @@ const Profile = () => {
       if (willDelete) {
         const token = localStorage.getItem("token");
         axios
-          .delete(`${process.env.REACT_APP_BACKEND_URL}/delete/recipe/${id}`, {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          })
+          .delete(
+            `${process.env.NEXT_PUBLIC_BACKEND_URL}/delete/recipe/${id}`,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          )
           .then((res) => {
             console.log(res.data);
             swal({
@@ -264,7 +267,7 @@ const Profile = () => {
                       <Card className="border-0">
                         <CardBody className="p-0">
                           <Image
-                            src={`${process.env.REACT_APP_BACKEND_URL}/uploads/recipe/${e.image}`}
+                            src={`${process.env.NEXT_PUBLIC_BACKEND_URL}/uploads/recipe/${e.image}`}
                             alt={e.title}
                           />
                           <Title>{e.title}</Title>

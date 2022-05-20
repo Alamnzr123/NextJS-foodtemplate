@@ -79,6 +79,169 @@ const Footer = () => {
           </Copyright>
         </List>
       </Container>
+
+      <style jsx>{`
+        /* Global CSS */
+        :root {
+          --main-color: #ffffff;
+          --main-color-2: #fff5ec;
+          --secondary-color: #efc81a;
+          --color-1: #ffffff;
+          --color-2: #2e266f;
+          --color-3: #3f3a3a;
+          --color-4: #707070;
+          --color-5: #000000;
+          --shadow-black-100: 0 5px 15px rgba(0, 0, 0, 0.1);
+          --shadow-black-300: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animation */
+        @keyframes bounceTop_01 {
+          0%,
+          100% {
+            transform: translateY(-30px);
+          }
+          50% {
+            transform: translateY(0px);
+          }
+        }
+
+        body {
+          overflow-x: hidden;
+          background-color: var(--main-color);
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          outline: none !important;
+        }
+
+
+        ul {
+          list-style: none;
+        }
+
+        .full {
+          height: 82vh;
+        }
+
+        iframe {
+          border-radius: 7px;
+          width: 85%;
+          height: 380px;
+
+          @media screen and (max-width: 576px) {
+            height: 190px;
+          }
+        }
+
+      
+          @media screen and (max-width: 576px) {
+            font-size: 14px;
+          }
+        }
+        .btn-view {
+          background-color: var(--color-2);
+          color: var(--color-1);
+          padding: 5px;
+          border-radius: 5px;
+          margin-right: 10px;
+
+          &:hover {
+            background-color: #1e1851;
+            color: var(--color-1);
+            box-shadow: var(--shadow-black-100);
+          }
+        }
+
+        .btn-edit {
+          background-color: var(--main-color);
+          color: var(--secondary-color);
+          padding: 5px;
+          border-radius: 5px;
+          margin-right: 10px;
+
+          &:hover {
+            background-color: #eeeeee;
+            color: var(--secondary-color);
+            box-shadow: var(--shadow-black-100);
+          }
+        }
+
+        .btn-delete {
+          background-color: var(--secondary-color);
+          color: var(--color-1);
+          padding: 5px 7px;
+          border-radius: 5px;
+          margin-right: 10px;
+          border: 0;
+
+          &:hover {
+            background-color: #cea905;
+            color: var(--color-1);
+            box-shadow: var(--shadow-black-100);
+          }
+        }
+
+        /* Responsive */
+        /* Navbar */
+        @media screen and (max-width: 992px) {
+          .navbar {
+            margin-top: -5px;
+            background-color: none;
+          }
+
+          .navbar-toggler {
+            background-color: var(--main-color);
+            box-shadow: var(--shadow-black-300);
+            height: 34px;
+            width: 44px;
+            padding: 0;
+            font-size: 17px;
+            color: var(--color-2);
+            float: right !important;
+          }
+
+          .navbar-nav {
+            background-color: var(--main-color);
+            /* box-shadow: var(--shadow-black-300); */
+          }
+
+          .navbar .nav-item {
+            padding: 5px 5px;
+          }
+
+          .navbar .nav-item {
+            background-color: var(--main-color);
+          }
+
+          .navbar .nav-auth a {
+            color: var(--color-2);
+          }
+
+          .navbar.navbar-shrink .navbar-toggler,
+          .navbar.navbar-shrink .navbar-nav {
+            background-color: var(--main-color);
+          }
+
+          /* .nav-auth,
+            .navbar-nav {
+              background-color: var(--main-color);
+              box-shadow: var(--shadow-black-300);
+            }
+        
+            .navbar .nav-item {
+              margin: 0;
+              padding: 5px 15px;
+            }
+        
+            .navbar.navbar-shrink .navbar-toggler,
+            .navbar.navbar-shrink .navbar-nav {
+                background-color: var(--main-color);
+            } */
+        }
+      `}</style>
     </Section>
   );
 };
