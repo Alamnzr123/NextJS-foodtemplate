@@ -43,7 +43,6 @@ const Home = () => {
           <div className="Rectangle309"></div>
           <div className="Rectangle313">
             <Image
-              src=""
               src="/52207741d95649c4cb58a57ba663027f.jpg"
               alt="Gambar1"
               width="830px"
