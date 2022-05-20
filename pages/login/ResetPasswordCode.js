@@ -8,14 +8,14 @@ const ResetPasswordCode = () => {
     <div>
       <Head>
         <title>Reset Password Code</title>
-        <link rel="icon" href="/assets/logo.svg" />
+        <link rel="icon" href="/logo.svg" />
       </Head>
       <div>
         <div className="row m-0 Auth_upper__6LgZK">
           <div className="col-md-6 Auth_bg__o9fLW">
             <div className="mask_bg"></div>
             <div className="background_login_logo">
-              <Image src="/assets/logo.svg" alt="user icon" layout="fill" />
+              <Image src="/logo.svg" alt="user icon" layout="fill" />
             </div>
           </div>
           <div className="col-md-6 px-0">

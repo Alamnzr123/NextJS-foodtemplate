@@ -106,7 +106,7 @@ const EditRecipe = () => {
     <div>
       <Head>
         <title>Edit Recipe</title>
-        <link rel="icon" href="/assets/logo.svg" />
+        <link rel="icon" href="/logo.svg" />
       </Head>
       <form
         method="post"
@@ -116,7 +116,7 @@ const EditRecipe = () => {
         <div className="Rectangle329">
           <div className="image_add">
             <Image
-              src={image || "/assets/image-solid.svg"}
+              src={image || "/image-solid.svg"}
               alt="Gambar1"
               layout="fill"
             />

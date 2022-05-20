@@ -7,7 +7,7 @@ const VideoRecipe = () => {
     <div>
       <Head>
         <title>Video Recipe</title>
-        <link rel="icon" href="/assets/logo.svg" />
+        <link rel="icon" href="/logo.svg" />
       </Head>
       <section>
         <div className="Rectangle_detailvideo"></div>
@@ -27,7 +27,7 @@ const VideoRecipe = () => {
         <div>
           <div className="Rectangle90">
             <Image
-              src="/assets/18ba457b82b3cae12e47df24ad8cf636.jpg"
+              src="/18ba457b82b3cae12e47df24ad8cf636.jpg"
               layout="fill"
               alt="Gambar1"
             />
@@ -42,7 +42,7 @@ const VideoRecipe = () => {
         <div>
           <div className="Rectangle91">
             <Image
-              src="/assets/dba40d04b40f63ec9dfa861a18f1591a.jpg"
+              src="/dba40d04b40f63ec9dfa861a18f1591a.jpg"
               layout="fill"
               alt="Gambar2"
             />
@@ -58,7 +58,7 @@ const VideoRecipe = () => {
         <div>
           <div className="Rectangle330_videodetail">
             <Image
-              src="/assets/dba40d04b40f63ec9dfa861a18f1591a.jpg"
+              src="/dba40d04b40f63ec9dfa861a18f1591a.jpg"
               layout="fill"
               alt="Gambar3"
             />

@@ -80,13 +80,13 @@ const Register = () => {
     <>
       <Head>
         <title>Register</title>
-        <link rel="icon" href="/assets/logo.svg" />
+        <link rel="icon" href="/logo.svg" />
       </Head>
       <div className="row m-0 Auth_upper__6LgZK">
         <div className="col-md-6 Auth_bg__o9fLW_Register">
           <div className="mask_bg_register"></div>
           <div className="background_register_logo">
-            <Image src="/assets/logo.svg" alt="user icon" layout="fill" />
+            <Image src="/logo.svg" alt="user icon" layout="fill" />
           </div>
         </div>
         <div className="col-md-6 px-0">

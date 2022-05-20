@@ -80,7 +80,7 @@ const Footer = () => {
         </List>
       </Container>
 
-      <style jsx>{`
+      <style global jsx>{`
         /* Global CSS */
         :root {
           --main-color: #ffffff;

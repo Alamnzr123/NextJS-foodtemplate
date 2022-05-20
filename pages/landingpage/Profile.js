@@ -202,17 +202,17 @@ const Profile = () => {
     <>
       <Head>
         <title>Profile</title>
-        <link rel="icon" href="/assets/logo.svg" />
+        <link rel="icon" href="/logo.svg" />
       </Head>
       <Container fluid>
         <Section>
           <div className="d-flex justify-content-center">
             <div className="position-relative">
               <Photo
-                src="/assets/4662c85cb7661f579e2c9baff0ce5fdc.png"
+                src="/4662c85cb7661f579e2c9baff0ce5fdc.png"
                 alt="username"
               />
-              <Icon src="/assets/logo_pencil.svg" alt="Icon" />
+              <Icon src="/logo_pencil.svg" alt="Icon" />
             </div>
           </div>
           <Username>Garneta Sharina</Username>
@@ -301,7 +301,7 @@ const Profile = () => {
                   <Card className="border-0">
                     <CardBody className="p-0">
                       <Image
-                        src="/assets/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg"
+                        src="/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg"
                         alt="Gambar2"
                       />
                       <Title>Chicken</Title>
@@ -324,7 +324,7 @@ const Profile = () => {
                   <Card className="border-0">
                     <CardBody className="p-0">
                       <Image
-                        src="/assets/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg"
+                        src="/cfef9bb1fc6e0bef50d5c8ef7a6cdff6.jpg"
                         alt="Chicken"
                       />
                       <Title>Chicken</Title>

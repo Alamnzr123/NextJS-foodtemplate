@@ -9,13 +9,13 @@ const RecipeDetail = () => {
     <div>
       <Head>
         <title>Recipe Detail</title>
-        <link rel="icon" href="/Assets/logo.svg" />
+        <link rel="icon" href="/logo.svg" />
       </Head>
       <header>
         <h1 className="text_loreamsandwich">Loream Sandwich</h1>
         <div className="Rectangle313_3">
           <Image
-            src="/assets/4da51338c06dd21688b82eae3bc9dfa6.jpg"
+            src="/4da51338c06dd21688b82eae3bc9dfa6.jpg"
             alt="Gambar1"
             layout="fill"
           />
@@ -74,7 +74,7 @@ const RecipeDetail = () => {
         </h2>
         <div className="ellipse128_detail">
           <Image
-            src="/assets/c08f710828e1d2aacf71af8c92583062.png"
+            src="/c08f710828e1d2aacf71af8c92583062.png"
             alt="Gambar2"
             layout="fill"
           />

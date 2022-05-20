@@ -68,7 +68,7 @@ const Navigation = () => {
       const decoded = typeof window !== "undefined" ? jwt_decode(token) : null;
       return (
         <div className={location.pathname === "/" ? "nav-auth" : "nav-inverse"}>
-          <Image src="/assets/User icon.png" alt="user icon" layout="fill" />
+          <Image src="/User icon.png" alt="user icon" layout="fill" />
           <Link href="/landingpage/Profile">{decoded.name}</Link>
           <button title="Logout" onClick={logout}>
             <i className="fa-solid fa-right-from-bracket"></i>
@@ -79,7 +79,7 @@ const Navigation = () => {
       return (
         <div className="nav-auth">
           <Image
-            src="/assets/User icon.png"
+            src="/User icon.png"
             alt="User Icon"
             width="40"
             height="40"
